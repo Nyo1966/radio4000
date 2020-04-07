@@ -48,19 +48,17 @@
 <section class="Section">
 	<div class="Container Container--full">
 		<div class="Grid Grid--center Grid--vcenter Grid--firstHidden">
-			{{#if model}}
-				{{#each model as |item|}}
-					<div class="Grid-cell">
-						{{channel-card channel=item}}
-					</div>
-				{{/each}}
+			{{#each model as |item|}}
 				<div class="Grid-cell">
-					<div class="ChannelCard ChannelCard--text">
-						<p>Tap a channel to play it!</p>
-						<p>Each channel is as unique as the person who is crafting it. <a href="{{href-to 'channels.search'}}" title="">Go to all radios</a>.</p>
-					</div>
+					{{channel-card channel=item}}
 				</div>
-			{{/if}}
+			{{/each}}
+			<div class="Grid-cell">
+				<div class="ChannelCard ChannelCard--text">
+					<p>Simply tap a channel to play it!</p>
+					<p>Each channel is as unique as the person who is crafting it. <a href="{{href-to 'channels.search'}}" title="">Go to all radios</a>.</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
